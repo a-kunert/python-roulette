@@ -42,34 +42,33 @@ numbers = [
 
 saldo = 100
 
-def game_saldo(current_saldo, stake, user_bet, result_number):
-    print(result_number)
-    if user_bet == result_number["color"]:
-        if user_bet == "grün":
-            return (current_saldo - stake) + (stake * 35)
-        else:
-            return (current_saldo - stake) + (stake * 2)
-    else:
-        return current_saldo - stake
-    
-# Modes:
-# - Color
-# - Number
-# - Dozen
-# - Parity
-    
-modes = ["Color","Number","Dozen","Parity"]    
-mode = ""
-    
+
+def game_saldo(current_saldo, stake, user_bet, result_number, mode):
+    if mode == "Color" and user_bet == result_number["color"]:
+        return current_saldo + stake
+    if mode == "Number" and user_bet == result_number["number"]:
+        return current_saldo + stake * 35
+    if mode == "Dozen" and user_bet[0] <= result_number["number"] <= user_bet[1]:
+        return current_saldo + stake * 2
+    if mode == "Parity" and result_number["number"] % 2 == user_bet % 2:
+        return current_saldo + stake
+    if mode == "Green" and result_number["number"] == 0:
+        return current_saldo + stake * 35
+    return current_saldo - stake
+
+
+modes = ["Color", "Number", "Dozen", "Parity", "Green"]
+
 while True:
-    number = numbers[randint(0,36)]
+    number = numbers[randint(0, 36)]
     print("Welchen Modus möchtest du spielen")
     print("(1) für Farbe")
     print("(2) für Zahl")
     print("(3) für Dutzend")
     print("(4) für Parität")
+    print("(5) für Grün")
     modeKey = int(input())
-    mode = modes[modeKey -1]
+    mode = modes[modeKey - 1]
     print(mode)
     money = int(input(f"Ihr Saldo beträgt {saldo}. Wie hoch ist ihr Einsatz?\n"))
     if saldo < money:
@@ -78,15 +77,38 @@ while True:
     if money <= 0:
         print("Ungültiger Einsatz.")
         continue
-    bet = input("Rot, schwarz oder grün? \n").lower()
-    saldo = game_saldo(saldo, money, bet, number)
-    print(f"Farbe: {number['color']}.")
-    if bet == number['color']:
+
+    bet = 0
+    if mode == "Color":
+        print("Welche Farbe möchtest du spielen")
+        print("(1) für Rot")
+        print("(2) für Schwarz")
+        bet = int(input())
+        bet = ["red", "black"][bet - 1]
+    if mode == "Number":
+        print("Welche Zahl zwischen 1 und 36 möchtest du spielen?")
+        bet = int(input())
+    if mode == "Dozen":
+        print("Welches Dutzend möchtest du spielen")
+        print("(1) für 1-12")
+        print("(2) für 13-24")
+        print("(3) für 25-36")
+        bet = int(input())
+        bet = [[1, 12], [13, 24], [25, 36]][bet - 1]
+    if mode == "Parity":
+        print("Welche Parität möchtest du spielen")
+        print("(1) für ungerade")
+        print("(2) für gerade")
+        bet = int(input())
+
+    oldSaldo = saldo
+    saldo = game_saldo(saldo, money, bet, number, mode)
+    print(f"Zahl: {number['number']}, Farbe: {number['color']}.")
+
+    if saldo > oldSaldo:
         print(f"Du hast die Runde gewonnen: Dein neues Saldo beträgt: {saldo}")
     else:
         print(f"Du hast leider verloren: Dein neues Saldo beträgt: {saldo}")
     if saldo == 0:
         print("Du bist pleite!")
         break
-
-
