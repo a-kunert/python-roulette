@@ -86,14 +86,17 @@ while True:
         continue
 
     balance -= stake
-    if mode.is_success(bet,number):
+    if mode.is_success(number):
         balance += stake * mode.get_factor()
-    print(f"Zahl: {number['number']}, Farbe: {number['color']}.")
-
-    if mode.is_success(bet,number):
+    print("\n\n")
+    print(f"Zahl: {number['number']}")
+    mode.print_result(number)
+    
+    if mode.is_success(number):
         print(f"Du hast die Runde gewonnen: Dein neues Saldo beträgt: {balance}")
     else:
         print(f"Du hast leider verloren: Dein neues Saldo beträgt: {balance}")
     if balance == 0:
         print("Du bist pleite!")
         break
+    print(3*"\n")    

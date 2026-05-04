@@ -7,12 +7,11 @@ class ParityMode(Mode):
         print("Welche Parität möchtest du spielen")
         print("(1) für ungerade")
         print("(2) für gerade")
-        bet = int(input())
-        return bet
+        self.bet = int(input())
 
 
-    def is_success(self, bet, result):
-        return result["number"] != 0 and result["number"] % 2 == bet % 2
+    def is_success(self,  result):
+        return result["number"] != 0 and result["number"] % 2 == self.bet % 2
 
     def get_factor(self):
         return 2

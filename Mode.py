@@ -1,7 +1,9 @@
 class Mode: 
 
+    bet = 0
+
     def ask_for_bet(self):
-        return 0
+        self.bet = 0
 
     def get_new_balance(self,balance,stake,bet,result):
         return balance-stake
@@ -9,8 +11,11 @@ class Mode:
     def get_factor(self):
         return 1
 
-    def is_success(self,bet,result):
+    def is_success(self,result):
         return False
+    
+    def print_result(self,result):
+        print("")
 
 
 
