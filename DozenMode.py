@@ -9,12 +9,20 @@ class DozenMode(Mode):
         bet = int(input())
         self.bet = [[1, 12], [13, 24], [25, 36]][bet - 1]
 
-
     def get_factor(self):
             return 3
 
     def is_success(self, result):
-        return self.bet[0] <= result["number"] <= self.bet[1]
+        number = result["number"]
+        if number == 0:
+            return False
+        return (number - 1)//12 == self.bet
+
+    def print_result(self,result):
+        number = result["number"]
+        if number == 0:
+            return print("")
+        return print(f"Dutzend {(number - 1)//12 +1}")
 
 
 
