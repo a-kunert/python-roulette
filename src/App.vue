@@ -56,6 +56,8 @@
 
 <script setup>
 
+
+
 const numbers = [
     {"number": 0, "color": "green"},
     {"number": 1, "color": "red"},
@@ -96,11 +98,12 @@ const numbers = [
     {"number": 36, "color": "red"}
 ]
 
-const getColor = (number) => {
+
+function getColor(number) {
     return {
-      "red": "text-red-500",
-      "black": "text-black",
-      "green": "text-yellow-300"  
+        "red": "text-red-500",
+        "black": "text-black",
+        "green": "text-yellow-300"
     }[number.color]
 }
 
