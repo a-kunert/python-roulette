@@ -5,6 +5,8 @@ from DozenMode import DozenMode
 from GreenMode import GreenMode
 from NumberMode import NumberMode
 from ParityMode import ParityMode
+from ColumnMode import ColumnMode
+from RowMode import RowMode
 
 numbers = [
     {"number": 0, "color": "green"},
@@ -55,6 +57,8 @@ modes = [
     DozenMode(),
     ParityMode(),
     GreenMode(),
+    ColumnMode(),
+    RowMode(),
 ]
 
 
@@ -66,6 +70,8 @@ while True:
     print("(3) für Dutzend")
     print("(4) für Parität")
     print("(5) für Grün")
+    print("(6) für Kolonne")
+    print("(7) für Zahlenreihe")
     modeKey = int(input())
     mode = modes[modeKey - 1]
     
