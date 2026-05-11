@@ -5,34 +5,101 @@
 
             <div class=" flex flex-col mt-10 items-end">
 
-              <div
-                  class="border border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                  <div class="[writing-mode:vertical-lr]">
-                    PASSE
+              <div class="grid grid-cols-2 ">
+                <div>
+                  <div>
+                    <div
+                        class="border-y border-l border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      <div class="[writing-mode:vertical-lr]">
+                        1-18
+                      </div>
+
+                    </div>
                   </div>
 
-              </div>
+                  <div>
+                    <div
+                        class="border-l border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      <div class="[writing-mode:vertical-lr]">
+                        Even
+                      </div>
+                    </div>
+                  </div>
 
-              <div
-                  class="border border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                <div class="[writing-mode:vertical-lr]">
-                  PAIR
+                  <div>
+                    <div
+                        class="border-y border-l border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      <div class="[writing-mode:vertical-lr]">
+                        Black
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div
+                      class="border-l border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      <div class="[writing-mode:vertical-lr]">
+                        Red
+                      </div>
+                    </div>
+
+                  <div>
+                    <div
+                      class="border-y border-l border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      <div class="[writing-mode:vertical-lr]">
+                        Odd
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div
+                      class="border-l border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      <div class="[writing-mode:vertical-lr]">
+                        19-36
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  </div>
+
                 </div>
 
-              </div>
+                <div>
+                  <div
+                      class="border-l border-t border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                    <div class="[writing-mode:vertical-lr]">
+                      1st 12
+                    </div>
 
-              <div
-                  class="border border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                <div class="[writing-mode:vertical-lr]">
-                  BLACK
+                  </div>
+
+                  <div
+                      class="border-l border-y border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                    <div class="[writing-mode:vertical-lr]">
+                      2nd 12
+                    </div>
+
+                  </div>
+
+                  <div
+                      class="border-l border-b border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                    <div class="[writing-mode:vertical-lr]">
+                      3rd 12
+                    </div>
+
+                  </div>
                 </div>
 
+
               </div>
 
 
 
-
-            </div>
+              </div>
 
             <div class="flex  flex-col items-start">
                 <div
@@ -65,7 +132,10 @@
             </div>
 
         </div>
+
     </div>
+
+
 </template>
 
 
