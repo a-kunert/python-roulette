@@ -1,9 +1,9 @@
 <template>
     <div class="p-10 bg-gray-100">
 
-        <div class="bg-[#049B04] border border-gray-800 rounded-xl p-6 grid grid-cols-3">
+        <div class="bg-[#049B04] border border-gray-800 rounded-xl p-6 grid grid-cols-2">
 
-            <div class="flex flex-col mt-10 items-end">
+            <div class=" flex flex-col mt-10 items-end">
 
               <div
                   class="border border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
@@ -34,7 +34,7 @@
 
             </div>
 
-            <div class="flex flex-col items-center">
+            <div class="flex  flex-col items-start">
                 <div
                     class="border-x border-t border-yellow-400 w-48 h-10 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
                     0
@@ -64,36 +64,7 @@
 
             </div>
 
-            <div class="flex flex-col mt-10">
-
-                <div
-                    class="border-t border-x border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-
-                    <div class="rotate-180 [writing-mode:vertical-rl]">
-                        MANQUE
-                    </div>
-                </div>
-
-                <div
-                    class="border border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-
-                    <div class="rotate-180 [writing-mode:vertical-rl]">
-                        IMPAIR
-                    </div>
-
-                </div>
-
-              <div
-                class="border border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-
-                <div class="rotate-180 [writing-mode:vertical-rl]">
-                  RED
-                </div>
-
-            </div>
-
-        </div></div>
-
+        </div>
     </div>
 </template>
 
