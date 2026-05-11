@@ -3,7 +3,36 @@
 
         <div class="bg-[#049B04] border border-gray-800 rounded-xl p-6 grid grid-cols-3">
 
-            <div></div>
+            <div class="flex flex-col mt-10 items-end">
+
+              <div
+                  class="border border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                  <div class="[writing-mode:vertical-lr]">
+                    PASSE
+                  </div>
+
+              </div>
+
+              <div
+                  class="border border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                <div class="[writing-mode:vertical-lr]">
+                  PAIR
+                </div>
+
+              </div>
+
+              <div
+                  class="border border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                <div class="[writing-mode:vertical-lr]">
+                  BLACK
+                </div>
+
+              </div>
+
+
+
+
+            </div>
 
             <div class="flex flex-col items-center">
                 <div
@@ -38,7 +67,7 @@
             <div class="flex flex-col mt-10">
 
                 <div
-                    class="border border-yellow-400 w-32 h-[240px] flex items-center justify-center text-yellow-300 font-extrabold font-serif text-3xl">
+                    class="border-t border-x border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
 
                     <div class="rotate-180 [writing-mode:vertical-rl]">
                         MANQUE
@@ -46,7 +75,7 @@
                 </div>
 
                 <div
-                    class="border border-yellow-400 w-32 h-[240px] flex items-center justify-center text-yellow-300 font-extrabold font-serif text-3xl">
+                    class="border border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
 
                     <div class="rotate-180 [writing-mode:vertical-rl]">
                         IMPAIR
@@ -54,9 +83,16 @@
 
                 </div>
 
+              <div
+                class="border border-yellow-400 w-20 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+
+                <div class="rotate-180 [writing-mode:vertical-rl]">
+                  RED
+                </div>
+
             </div>
 
-        </div>
+        </div></div>
 
     </div>
 </template>
