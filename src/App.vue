@@ -1,18 +1,56 @@
 <template>
     <div class="p-10 bg-gray-100">
         
-        <div class="bg-green-400 border border-gray-800 rounded-xl p-6 grid grid-cols-3">
-            <div></div>
-            <div class="grid grid-cols-[min-content_min-content_min-content]">
-              <div 
-                  class="border border-yellow-300 size-12 flex items-center justify-center" 
-                  :class="getColor(number)"
-                  v-for="number in numbers">{{number.number}}</div>
+        <div class="bg-[#049B04] border border-gray-800 rounded-xl p-6 grid grid-cols-3">
+
+          <div></div>
+
+            <div class="flex flex-col items-center">
+              <div class="border border-yellow-400 w-48 h-10 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                0
+              </div>
+
+            <div class="grid grid-cols-3">
+
+              <div
+                  class="border border-yellow-400 w-16 h-10 flex items-center justify-center font-serif text-2xl"
+                  :class="[getColor(number), number.color !== 'green' ? 'font-extrabold': '']"
+                  v-for="number in numbers.filter(number => number.number !== 0)"
+                  :key="number.number"
+                >
+                {{ number.number }}
+              </div>
 
             </div>
-            <div></div>
-            
-            
+
+              <div class="grid grid-cols-3">
+                <div class="border border-yellow-400 w-16 h-10"></div>
+                <div class="border border-yellow-400 w-16 h-10"></div>
+                <div class="border border-yellow-400 w-16 h-10"></div>
+              </div>
+
+            </div>
+
+          <div class="flex flex-col mt-10">
+
+            <div class="border border-yellow-400 w-32 h-[240px] flex items-center justify-center text-yellow-300 font-extrabold font-serif text-3xl">
+
+              <div class="rotate-180 [writing-mode:vertical-rl]">
+                MANQUE
+              </div>
+
+            </div>
+
+            <div class="border border-yellow-400 w-32 h-[240px] flex items-center justify-center text-yellow-300 font-extrabold font-serif text-3xl">
+
+              <div class="rotate-180 [writing-mode:vertical-rl]">
+                IMPAIR
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
         
     </div>
@@ -66,7 +104,7 @@ const numbers = [
 
 function getColor(number) {
     return {
-        "red": "text-red-500",
+        "red": "text-[#D00000]",
         "black": "text-black",
         "green": "text-yellow-300"
     }[number["color"]]
