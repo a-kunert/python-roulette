@@ -5,11 +5,11 @@
 
             <div class=" flex flex-col mt-10 items-end">
 
-              <div class="grid grid-cols-2 ">
-                <div>
+              <div class="grid grid-cols-2 border-y border-l border-yellow-400 h-120">
+                <div class="border-r border-yellow-400">
                   <div>
                     <div
-                        class="border-y border-l border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                        class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
                       <div class="[writing-mode:vertical-lr]">
                         1-18
                       </div>
@@ -19,7 +19,7 @@
 
                   <div>
                     <div
-                        class="border-l border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                        class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
                       <div class="[writing-mode:vertical-lr]">
                         Even
                       </div>
@@ -28,7 +28,7 @@
 
                   <div>
                     <div
-                        class="border-y border-l border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                        class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
                       <div class="[writing-mode:vertical-lr]">
                         Black
                       </div>
@@ -37,7 +37,7 @@
 
                   <div>
                     <div
-                      class="border-l border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      class=" border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
                       <div class="[writing-mode:vertical-lr]">
                         Red
                       </div>
@@ -45,7 +45,7 @@
 
                   <div>
                     <div
-                      class="border-y border-l border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      class=" border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
                       <div class="[writing-mode:vertical-lr]">
                         Odd
                       </div>
@@ -54,7 +54,7 @@
 
                   <div>
                     <div
-                      class="border-l border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      class=" border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
                       <div class="[writing-mode:vertical-lr]">
                         19-36
                       </div>
@@ -70,7 +70,7 @@
 
                 <div>
                   <div
-                      class="border-l border-t border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      class=" border-b border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
                     <div class="[writing-mode:vertical-lr]">
                       1st 12
                     </div>
@@ -78,7 +78,7 @@
                   </div>
 
                   <div
-                      class="border-l border-y border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      class="border-b border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
                     <div class="[writing-mode:vertical-lr]">
                       2nd 12
                     </div>
@@ -86,7 +86,7 @@
                   </div>
 
                   <div
-                      class="border-l border-b border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                      class=" border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
                     <div class="[writing-mode:vertical-lr]">
                       3rd 12
                     </div>
@@ -113,7 +113,8 @@
                         class="border-l border-t border-yellow-400 w-16 h-10 flex items-center justify-center font-serif text-2xl font-extrabold"
                         :class="[
                             getColor(number), 
-                        number.number % 3 === 0 ? 'border-r' : ''
+                        number.number % 3 === 0 ? 'border-r' : '',
+                        number.number > 33 ? 'border-b' : '',
                   ]"
                         v-for="number in numbers.filter(number => number.number !== 0)"
                         :key="number.number"
@@ -124,9 +125,9 @@
                 </div>
 
                 <div class="grid grid-cols-3">
-                    <div class="border-y border-l border-yellow-400 w-16 h-10"></div>
-                    <div class="border-y border-l border-yellow-400 w-16 h-10"></div>
-                    <div class="border border-yellow-400 w-16 h-10"></div>
+                    <div class="border-b border-l border-yellow-400 w-16 h-10"></div>
+                    <div class="border-b border-l border-yellow-400 w-16 h-10"></div>
+                    <div class="border-b border-x border-yellow-400 w-16 h-10"></div>
                 </div>
 
             </div>
