@@ -1,109 +1,111 @@
 <template>
     <div class="p-10 bg-gray-100">
 
-        <div class="bg-[#049B04] border border-gray-800 rounded-xl p-6 grid grid-cols-2">
+        <div class="xbg-[#049B04] bg-green-500 to-green-700 bg-linear-to-tr border border-gray-800 rounded-xl p-6 grid grid-cols-2">
 
-            <div class=" flex flex-col mt-10 items-end">
+            <div class=" flex flex-col mt-10 items-end font-semibold">
 
-              <div class="grid grid-cols-2 border-y border-l border-yellow-400 h-120">
-                <div class="border-r border-yellow-400">
-                  <div>
-                    <div
-                        class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                      <div class="[writing-mode:vertical-lr]">
-                        1-18
-                      </div>
+                <div class="grid grid-cols-2 border-y border-l border-yellow-400 h-120">
+                    <div class="border-r border-yellow-400">
+                        <div>
+                            <div
+                                class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl">
+                                <div class="[writing-mode:vertical-lr]">
+                                    1-18
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <div
+                                class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl">
+                                <div class="[writing-mode:vertical-lr]">
+                                    Even
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div
+                                class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl">
+                                <div class="scale-y-125">
+                                    <div class="size-6 bg-black rotate-45 ">
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div
+                                class=" border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl">
+
+                                <div class="scale-y-125">
+                                    <div class="size-6 bg-[#D00000] rotate-45 ">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div>
+                                <div
+                                    class=" border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl">
+                                    <div class="[writing-mode:vertical-lr]">
+                                        Odd
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div
+                                    class=" border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl">
+                                    <div class="[writing-mode:vertical-lr]">
+                                        19-36
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
 
                     </div>
-                  </div>
 
-                  <div>
-                    <div
-                        class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                      <div class="[writing-mode:vertical-lr]">
-                        Even
-                      </div>
+                    <div>
+                        <div
+                            class=" border-b border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300  font-serif text-2xl">
+                            <div class="[writing-mode:vertical-lr]">
+                                1st 12
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="border-b border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300  font-serif text-2xl">
+                            <div class="[writing-mode:vertical-lr]">
+                                2nd 12
+                            </div>
+
+                        </div>
+
+                        <div
+                            class=" border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300  font-serif text-2xl">
+                            <div class="[writing-mode:vertical-lr]">
+                                3rd 12
+                            </div>
+
+                        </div>
                     </div>
-                  </div>
 
-                  <div>
-                    <div
-                        class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                      <div class="[writing-mode:vertical-lr]">
-                        Black
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div
-                      class=" border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                      <div class="[writing-mode:vertical-lr]">
-                        Red
-                      </div>
-                    </div>
-
-                  <div>
-                    <div
-                      class=" border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                      <div class="[writing-mode:vertical-lr]">
-                        Odd
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div
-                      class=" border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                      <div class="[writing-mode:vertical-lr]">
-                        19-36
-                      </div>
-                    </div>
-                  </div>
-
-
-
-
-                  </div>
 
                 </div>
 
-                <div>
-                  <div
-                      class=" border-b border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                    <div class="[writing-mode:vertical-lr]">
-                      1st 12
-                    </div>
 
-                  </div>
-
-                  <div
-                      class="border-b border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                    <div class="[writing-mode:vertical-lr]">
-                      2nd 12
-                    </div>
-
-                  </div>
-
-                  <div
-                      class=" border-yellow-400 w-15 h-40 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
-                    <div class="[writing-mode:vertical-lr]">
-                      3rd 12
-                    </div>
-
-                  </div>
-                </div>
-
-
-              </div>
-
-
-
-              </div>
+            </div>
 
             <div class="flex  flex-col items-start">
                 <div
-                    class="border-x border-t border-yellow-400 w-48 h-10 flex items-center justify-center text-yellow-300 font-extrabold font-serif text-2xl">
+                    class="border-x border-t border-yellow-400 w-48 h-10 flex items-center justify-center text-yellow-300  font-serif text-2xl">
                     0
                 </div>
 
