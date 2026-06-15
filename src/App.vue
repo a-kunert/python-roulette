@@ -157,20 +157,13 @@
 
                     <div class="grid grid-cols-3">
 
-                        <div
-                            class="border-l border-t border-yellow-400 w-16 h-10 flex items-center justify-center font-serif text-2xl font-extrabold"
-                            :class="[
-                            getColor(number), 
-                        number.number % 3 === 0 ? 'border-r' : '',
-                        number.number > 33 ? '' : '',
-                        isActive('Number', number.number) ? 'bg-green-800' : ''
-                        ]"
+                        <NumberBlock
                             v-for="number in RouletteNumbers.filter(number => number.number !== 0)"
                             :key="number.number"
+                            :number="number"
+                            :bet="bet"
                             @click="setBet('Number', number.number)"
-                        >
-                            {{ number.number }}
-                        </div>
+                        ></NumberBlock>
 
                     </div>
 
@@ -198,6 +191,7 @@
 import { ref } from 'vue'
 import RouletteNumbers from './src/RouletteNumbers.js'
 import DozenBlock from './components/DozenBlock.vue'
+import NumberBlock from './components/NumberBlock.vue'
 
 const balance = ref(1000)
 
@@ -327,13 +321,7 @@ const stake = ref(0)
 
 
 
-function getColor(number) {
-    return {
-        "red": "text-[#D00000]",
-        "black": "text-black",
-        "green": "text-yellow-300"
-    }[number["color"]]
-}
+
 
 
 </script>
