@@ -2,7 +2,7 @@
     <div
         class="w-15 h-40 flex items-center justify-center text-yellow-300  font-serif text-2xl"
         :class="dozen !== 3 ? 'border-b border-yellow-400' : 'border-yellow-400'"
-        @click="setBet('Dozen', dozen)"
+
     >
         <div class="[writing-mode:vertical-lr]">
             {{dozen}}<span class="text-lg">{{ suffix }}</span> 12

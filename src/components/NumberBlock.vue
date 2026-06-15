@@ -2,9 +2,9 @@
     <div
         class="border-l border-t border-yellow-400 w-16 h-10 flex items-center justify-center font-serif text-2xl font-extrabold"
         :class="[
-                            color, 
+                        color,
                         number.number % 3 === 0 ? 'border-r' : '',
-                        number.number > 33 ? '' : '',
+                        number.number > 33 ? 'border-b' : '',
                         isActive ? 'bg-green-800' : ''
                         ]"
        

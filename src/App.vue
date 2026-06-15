@@ -59,87 +59,47 @@
 
                     <div class="grid grid-cols-2 border-y border-l border-yellow-400 h-120">
                         <div class="border-r border-yellow-400">
-                            <div
-                                class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl"
-                                :class="[
-                                    isActive('Range', 'Low') ? 'bg-green-800' : ''
-                                ]">
-                                <div class="[writing-mode:vertical-lr]"
-                                @click="setBet('Range', 'Low')">
-                                    1-18
-                                </div>
-                            </div>
 
-                            <div
-                                class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl"
-                                @click="setBet('Parity','Even')"
-                                :class="[
-                                    isActive('Parity', 'Even') ? 'bg-green-800' : ''
-                                ]">
-                                <div class="[writing-mode:vertical-lr]">
-                                    Even
-                                </div>
-                            </div>
+                          <RangeBlock
+                              range="Low"
+                              :bet="bet"
+                              @click="setBet('Range', 'Low')"
+                          ></RangeBlock>
 
-                            <div
-                                class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl">
-                                <div class="scale-y-125">
-                                    <div
-                                        class="size-6 bg-black rotate-45 "
-                                        @click="setBet('Color', 'Black')"
-                                        :class="[
-                                          isActive('Color', 'Black') ? 'ring-2 ring-green-800' : ''
-                                        ]"
+                          <ParityBlock
+                              parity="Even"
+                              :bet="bet"
+                              @click="setBet('Parity', 'Even')"
+                          ></ParityBlock>
 
-                                    >
-                                    </div>
+                          <ColorBlock
+                              color="red" :bet="bet"
+                              @click="setBet('color', 'red')"
+                          ></ColorBlock>
 
-                                </div>
-                            </div>
+                          <ColorBlock
+                              color="black" :bet="bet"
+                              @click="setBet('color', 'black')"
+                          ></ColorBlock>
 
-                            <div
-                                class=" border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl">
+                          <ParityBlock
+                              parity="Odd"
+                              :bet="bet"
+                              @click="setBet('Parity', 'Odd')"
+                          ></ParityBlock>
 
-                                <div class="scale-y-125">
-                                    <div class="size-6 bg-[#D00000] rotate-45 "
-                                    @click="setBet('Color', 'Red')"
-                                    :class="[
-                                        isActive('Color', 'Red') ? 'ring-2 ring-green-800' : ''
-                                    ]"
-                                    >
-                                    </div>
+                          <RangeBlock
+                              range="High"
+                              :bet="bet"
+                              @click="setBet('Range', 'High')"
+                          ></RangeBlock>
 
-                                </div>
-                            </div>
-
-                            <div
-                                class=" border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl"
-                                @click="setBet('Parity','Odd')"
-                                :class="[
-                                    isActive('Parity', 'Odd') ? 'bg-green-800' : ''
-                                ]">
-
-                                <div class="[writing-mode:vertical-lr]">
-                                    Odd
-                                </div>
-                            </div>
-
-                            <div
-                                class="border-b border-yellow-400 w-15 h-20 flex items-center justify-center text-yellow-300  font-serif text-2xl"
-                                :class="[
-                                    isActive('Range', 'High') ? 'bg-green-800' : ''
-                                ]">
-                                <div class="[writing-mode:vertical-lr]"
-                                @click="setBet('Range', 'High')">
-                                    19-36
-                                </div>
-                            </div>
                         </div>
 
                         <div>
-                            <DozenBlock :dozen="1" :setBet="setBet"></DozenBlock>
-                            <DozenBlock :dozen="2" :setBet="setBet"></DozenBlock>
-                            <DozenBlock :dozen="3" :setBet="setBet"></DozenBlock>
+                            <DozenBlock :dozen="1" @click="setBet('Dozen', 1)"></DozenBlock>
+                            <DozenBlock :dozen="2" @click="setBet('Dozen', 2)"></DozenBlock>
+                            <DozenBlock :dozen="3" @click="setBet('Dozen', 3)"></DozenBlock>
                         </div>
 
 
@@ -168,14 +128,23 @@
                     </div>
 
                     <div class="grid grid-cols-3">
-                        <div class="border-y border-l border-yellow-400 w-16 h-10"
-                             @click="setBet('Column', '1')"></div>
-                        <div class="border-y border-l border-yellow-400 w-16 h-10"
-                             @click="setBet('Column', '2')"></div>
-                        <div class="border-y border-x border-yellow-400 w-16 h-10"
-                             @click="setBet('Column', '3')"></div>
-                    </div>
 
+                        <ColumnBlock
+                            column = "1" :bet="bet"
+                            @click="setBet('column', '1')"
+                        ></ColumnBlock>
+
+                        <ColumnBlock
+                            column = "2" :bet="bet"
+                            @click="setBet('column', '2')"
+                        ></ColumnBlock>
+
+                        <ColumnBlock
+                            column = "3" :bet="bet"
+                            @click="setBet('column', '3')"
+                        ></ColumnBlock>
+
+                    </div>
                 </div>
             </div>
 
@@ -192,6 +161,10 @@ import { ref } from 'vue'
 import RouletteNumbers from './src/RouletteNumbers.js'
 import DozenBlock from './components/DozenBlock.vue'
 import NumberBlock from './components/NumberBlock.vue'
+import ColorBlock from "./components/ColorBlock.vue";
+import ColumnBlock from "./components/ColumnBlock.vue";
+import ParityBlock from "./components/ParityBlock.vue";
+import RangeBlock from "./components/RangeBlock.vue";
 
 const balance = ref(1000)
 
@@ -209,18 +182,6 @@ const currentNumber = ref(null)
 const currentColor = ref(null)
 
 
-//Hervorhebung Feld
-function isActive(type, value) {
-  if (bet.value === null) {
-    return false
-  }
-
-  if (bet.value.type === type && bet.value.value === value) {
-    return true
-  }
-  return false
-
-}
 
 
 function playGame() {
