@@ -48,8 +48,6 @@ numbers = [
     {"number": 36, "color": "red"}
 ]
 
-balance = 100
-
 
 modes = [
     ColorMode(),
